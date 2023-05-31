@@ -1,39 +1,39 @@
-class zad26 {
+class zad5 {
     int value;
-    zad26 left;
-    zad26 right;
+    zad5 left;
+    zad5 right;
 
-    public zad26(int value) {
+    public zad5(int value) {
         this.value = value;
         left = null;
         right = null;
     }
 }
 
-public class BinarySearchTree26 {
-    zad26 root;
+public class BinarySearchTree5 {
+    zad5 root;
 
-    public BinarySearchTree26() {
+    public BinarySearchTree5() {
         root = null;
     }
 
     public void insert(int value) {
         if (root == null) {
-            root = new zad26(value);
+            root = new zad5(value);
             return;
         }
 
-        zad26 current = root;
+        zad5 current = root;
         while (true) {
             if (value < current.value) {
                 if (current.left == null) {
-                    current.left = new zad26(value);
+                    current.left = new zad5(value);
                     return;
                 }
                 current = current.left;
             } else {
                 if (current.right == null) {
-                    current.right = new zad26(value);
+                    current.right = new zad5(value);
                     return;
                 }
                 current = current.right;
@@ -42,7 +42,7 @@ public class BinarySearchTree26 {
     }
 
     public boolean search(int value) {
-        zad26 current = root;
+        zad5 current = root;
         while (current != null) {
             if (value == current.value) {
                 return true;
@@ -56,7 +56,7 @@ public class BinarySearchTree26 {
     }
 
     public static void main(String[] args) {
-        BinarySearchTree26 bst = new BinarySearchTree26();
+        BinarySearchTree5 bst = new BinarySearchTree5();
         bst.insert(50);
         bst.insert(30);
         bst.insert(70);
